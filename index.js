@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 
-const questions = () => {
+const position = () => {
     return inquirer.prompt([
         {
             type: 'list',
@@ -50,8 +50,21 @@ const managerCard = () => {
         },
     ])
     .then((answers) => {
-       console.log(answers); // calls a write that will write the answers and populate the html doc
+            fs.appendFile('./web/empty.html',`<div class="card bg-danger" style="width: 18rem; margin-top: 2em;">
+            <div class="card-header text-white">
+                ${answers.name}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Manager <i class="fas fa-glasses"></i></li>
+                <li class="list-group-item">id: ${answers.id}</li>
+                <li class="list-group-item"> Office number: ${answers.office}</li>
+                <li class="list-group-item">Email: <a href="mailto:${answers.email}">${answers.email}</a></li>
+            </ul>
+        </div>`,
+        (err) =>
+        err ? console.error(err) : console.log('Success!'));
     })
+
 };
 
 const developerCard = () => {
@@ -78,7 +91,19 @@ const developerCard = () => {
         },
     ])
     .then((answers) => {
-       console.log(answers); // calls a write that will write the answers and populate the html doc
+        fs.appendFile('./web/empty.html',`<div class="card bg-danger" style="width: 18rem; margin-top: 2em;">
+        <div class="card-header text-white">
+            ${answers.name}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Developer <i class="fas fa-code"></i></li>
+            <li class="list-group-item">id: ${answers.id}</li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/${answers.git}">${answers.git}</a></li>
+            <li class="list-group-item">Email: <a href="mailto:${answers.email}">${answers.email}</a></li>
+        </ul>
+    </div>`,
+    (err) =>
+    err ? console.error(err) : console.log('Success!'));
     })
 };
 
@@ -106,10 +131,25 @@ const internCard = () => {
         },
     ])
     .then((answers) => {
-       console.log(answers); // calls a write that will write the answers and populate the html doc
+        fs.appendFile('./web/empty.html',`<div class="card bg-danger" style="width: 18rem; margin-top: 2em;">
+        <div class="card-header text-white">
+            ${answers.name}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Intern <i class="fas fa-graduation-cap"></i></li>
+            <li class="list-group-item">id: ${answers.id}</li>
+            <li class="list-group-item">${answers.school}</a></li>
+            <li class="list-group-item">Email: <a href="mailto:${answers.email}">${answers.email}</a></li>
+        </ul>
+    </div>`,
+    (err) =>
+    err ? console.error(err) : console.log('Success!'));
     })
 }
 
 
 
-questions();
+
+
+position();
+
