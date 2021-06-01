@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.13.0/css/all.css">
     <title>Team Member Dashboard</title>
 </head>
   <div class="jumbotron jumbotron-fluid bg-info text-white">
@@ -19,7 +20,7 @@
                 ${name}
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${position}</li>
+                <li class="list-group-item">${position} <i class="fas fa-glasses"></i></li>
                 <li class="list-group-item">id: ${id}</li>
                 <li class="list-group-item"> Office number: ${office}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -30,7 +31,7 @@
                 ${name}
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${position}</li>
+                <li class="list-group-item">${position} <i class="fas fa-code"></i></i></li>
                 <li class="list-group-item">id: ${id}</li>
                 <li class="list-group-item">GitHub: <a href="https://github.com/${git}">${git}</a></li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -41,7 +42,7 @@
                 ${name}
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${position}</li>
+                <li class="list-group-item">${position} <i class="fas fa-graduation-cap"></i></li>
                 <li class="list-group-item">id: ${id}</li>
                 <li class="list-group-item">${school}</a></li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
