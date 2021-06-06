@@ -138,7 +138,7 @@ const internCard = () => {
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Intern <i class="fas fa-graduation-cap"></i></li>
             <li class="list-group-item">id: ${answers.id}</li>
-            <li class="list-group-item">${answers.school}</a></li>
+            <li class="list-group-item">School: ${answers.school}</a></li>
             <li class="list-group-item">Email: <a href="mailto:${answers.email}">${answers.email}</a></li>
         </ul>
     </div>`,
