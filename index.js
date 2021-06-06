@@ -5,7 +5,7 @@ const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
 
 const employee = () => {
-    return inquirer.prompt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'name',
@@ -29,8 +29,7 @@ const employee = () => {
         }
     ])
     .then(({name, role, id, email}) => {
-        const role ='';
-        switch (position.position) {
+        switch (role) {
             case 'manager':
                 role = 'Office Number';
                 break;
@@ -67,12 +66,19 @@ const employee = () => {
                     newEmployee = new Intern(name, id, email, uniqueInfo);
                     break;
             }
+            switch(done) {
+                case 'Yes':
+                    employee();
+                    break;
+                case 'No':
+                    console.log('Input finish html function here');
+            }
         })
 
     })
 }
 
-
+employee();
 
 
 
@@ -224,7 +230,4 @@ const employee = () => {
 
 
 
-
-
-position();
 
