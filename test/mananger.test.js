@@ -11,6 +11,6 @@ describe('getOffice', ()=> {
 describe('getRole', ()=> {
     it('Can get role by using getRole();', ()=>{
         const x = new Manager();
-        expect(x.getRole()).toBe('Manager');
+        expect(x.getRole()).toBe('manager');
     })
 })

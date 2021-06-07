@@ -19,7 +19,7 @@ describe('git', ()=> {
 describe('getRole', ()=> {
     it('Can get role by using getRole();', ()=>{
         const x = new Engineer();
-        expect(x.getRole()).toBe('Engineer');
+        expect(x.getRole()).toBe('engineer');
     })
 })
 

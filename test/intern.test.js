@@ -3,7 +3,7 @@ const Intern = require('../lib/intern');
 describe('getRole', ()=> {
     it('Can get role by using getRole();', ()=>{
         const x = new Intern();
-        expect(x.getRole()).toBe('Intern');
+        expect(x.getRole()).toBe('intern');
     })
 })
 
